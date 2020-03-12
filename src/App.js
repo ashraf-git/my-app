@@ -8,26 +8,19 @@ return (
     <div className="App">
       <header className="App-header">
         <h1>I am React Lover.</h1>
-        <Person name={noyoks[0]} lover = 'Mossammad Hena Begum'></Person>
-        <Person name="Mossammad Hena Begum" lover='Mohammad Ali Ashraf Khan'></Person>
-        <Person></Person>
+        <Person name = "Munna" job= "football"></Person>
+        <Person name = "Masum" job= "dorsok"></Person>
       </header>
     </div>
   );
 }
-
 function Person(props){
-  const personStyle = {
-    color: 'yellow',
-    border: '2px solid green',
-    margin: '10px',
-    padding: '10px'
-  }
-  console.log(props)
-  return <div style = {personStyle}>
-  <h1> Name: {props.name}</h1>
-  <h3>hero of {props.lover}</h3>
-  </div>
+  return (
+    <div style={{border:"2px solid green", padding: "10px", margin: "5px"}}>
+      <h1>My Name: {props.name}</h1>
+      <h3>My Profession: {props.job}</h3>
+    </div>
+  )
 }
 
 export default App;
