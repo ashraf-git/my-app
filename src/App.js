@@ -10,14 +10,23 @@ function App() {
     {name: 'Pdf Reader', price: '$06.00'},
     {name: 'XD', price: '$59.00'}
   ]
+  // const productNames = products.map(product => product)
+   const noyoksNames = noyoks.map(nayok => nayok);
+  // console.log(productNames)
+  console.log(noyoksNames);
 return (
     <div className="App">
       <header className="App-header">
         <h1>I am React Lover.</h1>
-        <Product product = {products[0]}></Product>
-        <Product product = {products[1]}></Product>
-        <Person name = "Munna" job= "football"></Person>
-        <Person name = "Masum" job= "dorsok"></Person>
+        {
+          noyoks.map(nayok => <li>{nayok}</li>)
+        }
+        {
+          products.map(product => <li>{product.name}</li>)
+        }
+        {
+          products.map(product =><Product product={product}></Product>)
+        }
       </header>
     </div>
   );
